@@ -1,3 +1,4 @@
+# -*- coding=utf-8 -*-
 from math import pi, sin, cos, sqrt
 
 # robot.andar(m)
