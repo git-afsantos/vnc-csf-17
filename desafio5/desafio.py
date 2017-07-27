@@ -25,19 +25,26 @@ from math import pi, sin, cos, sqrt
 #                     verificar se chegou ao objetivo
 
 def quando_inicia(robot):
-    pass
+    robot.rodar(pi/2)
+    robot.executar_depois("andar", 0.32)
+    robot.executar_depois("rodar", -pi/3)
+    robot.executar_depois("andar", 0.64)
+    robot.executar_depois("rodar", -pi/3)
+    robot.executar_depois("andar", 0.64)
+    robot.executar_depois("rodar", -pi/3)
+    robot.executar_depois("andar", 0.64)
+    robot.executar_depois("rodar", -pi/3)
+    robot.executar_depois("andar", 0.64)
+    robot.executar_depois("rodar", -pi/3)
+    robot.executar_depois("andar", 0.64)
+    robot.executar_depois("rodar", -pi/3)
+    robot.executar_depois("andar", 0.32)
 
 def quando_bate_na_frente(robot):
-    pass
+    robot.terminar()
 
 def quando_bate_na_esquerda(robot):
-    pass
+    robot.terminar()
 
 def quando_bate_na_direita(robot):
-    pass
-
-def andar_feito(robot):
-    pass
-
-def rodar_feito(robot):
-    pass
+    robot.terminar()

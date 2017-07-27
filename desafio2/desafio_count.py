@@ -24,20 +24,25 @@ from math import pi, sin, cos, sqrt
 #                     verificar se chegou ao objetivo
 
 def quando_inicia(robot):
-    robot.rodar(-pi/4)
-    robot.executar_depois("andar", 0.44)
-    robot.executar_depois("rodar", -pi/4)
-    robot.executar_depois("andar", sqrt(0.64**2 + 0.64**2))
-    robot.executar_depois("rodar", pi/4)
-    robot.executar_depois("andar", 0.64)
-    robot.executar_depois("rodar", pi/4)
-    robot.executar_depois("andar", sqrt(0.32**2 + 0.32**2))
+    robot.contador = 7
+    robot.andar(2)
 
 def quando_bate_na_frente(robot):
     robot.terminar()
 
 def quando_bate_na_esquerda(robot):
-    robot.terminar()
+    robot.desconta()
+    if robot.contador == 0:
+        robot.terminar()
+    else:
+        robot.rodar(-3*pi/8)
 
 def quando_bate_na_direita(robot):
-    robot.terminar()
+    robot.desconta()
+    if robot.contador == 0:
+        robot.terminar()
+    else:
+        robot.rodar(3*pi/8)
+
+def rodar_feito(robot):
+    robot.andar(2)

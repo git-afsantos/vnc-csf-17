@@ -25,7 +25,7 @@ from math import pi, sin, cos, sqrt
 
 
 def quando_inicia(robot):
-    pass
+    robot.andar(1.7)
 
 def quando_bate_na_frente(robot):
     pass
@@ -37,7 +37,7 @@ def quando_bate_na_direita(robot):
     pass
 
 def andar_feito(robot):
-    pass
+    robot.rodar(pi)
 
 def rodar_feito(robot):
-    pass
+    robot.terminar()

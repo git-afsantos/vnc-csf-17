@@ -23,20 +23,16 @@ from math import pi, sin, cos, sqrt
 # robot.terminar()  - terminar a atividade do robot e
 #                     verificar se chegou ao objetivo
 
+etapas_andar = [10, 10, 10, 0.5]
+etapas_rodar = [pi/2, -pi/2, -pi/2, pi/2]
+
 def quando_inicia(robot):
-    pass
-
-def quando_bate_na_frente(robot):
-    pass
-
-def quando_bate_na_esquerda(robot):
-    pass
-
-def quando_bate_na_direita(robot):
-    pass
-
-def andar_feito(robot):
-    pass
-
-def rodar_feito(robot):
-    pass
+    robot.andar(10)
+    robot.executar_depois("rodar", pi/2)
+    robot.executar_depois("andar", 10)
+    robot.executar_depois("rodar", -pi/2)
+    robot.executar_depois("andar", 10)
+    robot.executar_depois("rodar", -pi/2)
+    robot.executar_depois("andar", 10)
+    robot.executar_depois("rodar", pi/2)
+    robot.executar_depois("andar", 0.5)

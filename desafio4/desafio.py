@@ -26,10 +26,15 @@ from math import pi, sin, cos, sqrt
 
 
 def quando_inicia(robot):
-    pass
+    robot.contador = 5
+    robot.andar(10)
 
 def quando_bate_na_frente(robot):
-    pass
+    robot.desconta()
+    if robot.contador > 0:
+        robot.rodar(pi/2)
+    else:
+        robot.terminar()
 
 def quando_bate_na_esquerda(robot):
     pass
@@ -41,4 +46,4 @@ def andar_feito(robot):
     pass
 
 def rodar_feito(robot):
-    pass
+    robot.andar(10)
