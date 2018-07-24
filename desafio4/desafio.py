@@ -13,9 +13,11 @@ from math import pi, sin, cos, sqrt
 
 # robot.andar(m)    - andar em frente {m} metros
 # robot.rodar(rad)  - rodar sem sair do sítio {rad} radianos
-# robot.executar_depois("comando", valor)
-#                   - registar um comando ("andar", "rodar")
-#                     para executar depois, por ordem
+# robot.andar_depois(m)
+# robot.rodar_depois(rad)
+#                   - registar um comando para executar depois, por ordem
+# robot.comando_seguinte()
+#                   - passar ao comando seguinte
 # robot.cancelar_comando()
 #                   - cancelar o comando atual e passar ao seguinte
 # robot.contador    - número inteiro, começa em zero
@@ -23,7 +25,6 @@ from math import pi, sin, cos, sqrt
 # robot.desconta()  - subtrair 1 ao contador
 # robot.terminar()  - terminar a atividade do robot e
 #                     verificar se chegou ao objetivo
-
 
 def quando_inicia(robot):
     pass
