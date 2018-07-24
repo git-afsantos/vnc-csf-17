@@ -641,6 +641,15 @@ class UserController(object):
     def executar_depois(self, cmd, value):
         self.commands.append((getattr(self, cmd), value))
 
+    def andar_depois(self, value):
+        self.commands.append((self.andar, value))
+
+    def rodar_depois(self, value):
+        self.commands.append((self.rodar, value))
+
+    def comando_seguinte(self):
+        self.skip(self)
+
     def cancelar_comando(self):
         if self.to_walk > 0.0 or self.to_rotate > 0.0:
             self.to_walk = 0.0
@@ -803,8 +812,6 @@ class Game(State):
                 sys.exit()
             else:
                 self.input.on_key_up(event)
-        elif event.type == pg.MOUSEBUTTONDOWN:
-            self.done = True
 
     def update(self, dt):
         # NOTE: safety update here so that it overrides keyop
